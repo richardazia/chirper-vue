@@ -1,0 +1,22 @@
+# Laravel Notes
+
+Frameworks are good because
+
+- recipe for clean code
+- granular testing and easy to reuse
+- changes are easy
+- organisation
+- prebuilt and pretested
+- someone else did the work
+- organised
+- team collaboration
+- modular development
+
+## Do we always need a framework? 
+
+No, because sometimes a few lines of code will do what we need, without having an entire framework in the background
+
+- breaking up code = more steps do do something
+- learning curve
+
+
