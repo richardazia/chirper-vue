@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Chirp extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+      'message',
+    ];
+
+    public function user()
+
+    {
+      return $this->belongsTo(User::class);
+    }
+
 }
