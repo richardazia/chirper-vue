@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SurfingController;
 use App\http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -33,6 +34,10 @@ Route::get('/dashboard', function () {
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
+
+Route::resource('surfing', SurfingController::class)
+  ->only(['index', 'store'])
+  ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
