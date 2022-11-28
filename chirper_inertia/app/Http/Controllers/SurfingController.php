@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Surfing;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class SurfingController extends Controller
 {
@@ -14,7 +15,9 @@ class SurfingController extends Controller
      */
     public function index()
     {
-        return 'This is the Surfing the World Wide Waves section';
+        return Inertia::render('Surfing/index', [
+          //
+        ]);
     }
 
     /**
