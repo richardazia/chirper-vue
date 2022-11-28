@@ -38,7 +38,13 @@ class SurfingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $validated = $request->validate([
+          'message' => 'required|string|max:2000',
+      ]);
+
+      $request->user()->surfing()->create($validated);
+
+      return redirect(route('surfing.index'));
     }
 
     /**

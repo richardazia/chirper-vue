@@ -19,4 +19,14 @@ No, because sometimes a few lines of code will do what we need, without having a
 - breaking up code = more steps do do something
 - learning curve
 
+## The Model View Controller
 
+The model or data layer
+The view or user interface
+the Controller for UI interactions and updates to the model
+
+www.php-fig.org - keep an eye on this. 
+
+Light or heavy frameworks
+
+ 
