@@ -16,7 +16,7 @@ class SurfingController extends Controller
     public function index()
     {
         return Inertia::render('Surfing/index', [
-          //
+          'surfings' => Surfing::with('user:id, name')->latest()->get(),
         ]);
     }
 

@@ -1,8 +1,11 @@
 <script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import Surfing from "@/Components/Chirp.vue";
 import InputError from "@/Components/InputError.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { useForm, Head } from "@inertiajs/inertia-vue3";
+
+defineProps(["surfing"]);
 
 const form = useForm({
   message: ""
@@ -27,6 +30,14 @@ const form = useForm({
         <InputError :message="form.errors.message" class="mt-2" />
         <PrimaryButton class="mt-4">Post</PrimaryButton>
       </form>
+
+      <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+        <Surfing
+          v-for="surfing in surfings"
+          :key="surfing.id"
+          :surfing="surfing"
+        />
+      </div>
     </div>
   </AuthenticatedLayout>
 </template>
